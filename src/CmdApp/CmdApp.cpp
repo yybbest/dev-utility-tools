@@ -22,9 +22,13 @@ int _tmain(int argc, _TCHAR* argv[])
     pPluginFactory->SetBinPath(strBinPath);
     if(!pPluginFactory->AddPluginLib(_T("StatFile.dll")))
 		std::cout<<"添加StatFile.dll失败"<<std::endl;
+	else
+        std::cout<<"成功加载StatFile插件"<<std::endl;
 
     if(!pPluginFactory->AddPluginLib(_T("OutputFile.dll")))
         std::cout<<"添加OutputFile.dll失败"<<std::endl;
+	else
+		std::cout<<"成功加载OutputFile插件"<<std::endl;
   
 	IPluginObjPtr ptrStatFile = pPluginFactory->GetPlugin(_T("StatFile.dll"));
 	std::string strFolder = _T("D:\\dev-utility-tools\\doc");

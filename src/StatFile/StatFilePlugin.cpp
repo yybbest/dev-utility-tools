@@ -69,6 +69,7 @@ BOOL CStatFilePlugin::ProcessData( boost::any& anyData )
         std::cout<<"请等待！！！"<<std::endl;
         
 		std::string	strTmpDir = m_info.m_strPath + TEXT("\\");
+		// 统计文件数
 		StatAllFileInFolder(strTmpDir);
 
         std::cout<<"文件夹数："<<m_info.m_FolderNum<<std::endl;
